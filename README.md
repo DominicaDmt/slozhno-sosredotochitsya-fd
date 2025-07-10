@@ -1,1 +1,1 @@
-https://github.com/DominicaDmt/slozhno-sosredotochitsya-fd/tree/main
+https://github.com/DominicaDmt/slozhno-sosredotochitsya-fd
