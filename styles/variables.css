@@ -2,11 +2,14 @@
   --font-family: 'IBM Plex mono',  sans-serif;
   --backround-image: url('../images/cover-image-dark.png');
   --backround-color: #000028;
+  --header-decor-visibility: visible;
   --header-title-color: #DB00FF;
   --footer-title-color: #DB00FF;
   --title-color: #000028;
+  --title-section-color: #FF0070;
   --text-color: #F1B2CE;
   --accent-color: #FF0070;
+  --accent-decor-color: #FF0070;
   --accent-color-button: rgba(255, 0, 112, 0.4);
   --text-font-size: 18px;
 }

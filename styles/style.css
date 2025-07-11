@@ -1,5 +1,5 @@
 .page {
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, 'Arial'), sans-serif;
   background-image: var(--backround-image);
   background-position: center;
   background-repeat: no-repeat;
@@ -34,15 +34,15 @@
 .decorated-zone::before {
   top: 10px;
   right: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-decor-color);
+  border-right: 1px solid var(--accent-decor-color);
 }
 
 .decorated-zone::after {
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-decor-color);
+  border-left: 1px solid var(--accent-decor-color);
 }
 
 .header-decor {
@@ -52,6 +52,7 @@
   top: 10px;
   right: 19px;
   gap: 10px;
+  visibility: var(--header-decor-visibility);
 }
 
 .header-decor::before {
@@ -76,23 +77,24 @@
 }
 
 .header__theme-menu-list {
-  color: var(--accent-color);
+  color: var(--accent-decor-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .header__theme-menu-button {
-  padding: 1.5px 13px;
+  padding: 1px 12px;
   background-color: transparent;
   text-transform: lowercase;
-  border: none;
+  border: 1px solid transparent;
+  outline: none;
   cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid currentColor;
+  border-color: currentColor;
 }
 
 .header__theme-menu-button:focus {
@@ -100,11 +102,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid currentColor;
+  border-bottom-color: currentColor;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color-button);
+  border-color: var(--accent-color-button);
 }
 
 .header__title {
@@ -146,7 +148,7 @@
   font-size: inherit;
   font-weight: 700;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--title-section-color);
 }
 
 .thin-title {
@@ -213,6 +215,8 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
@@ -255,17 +259,18 @@
   }
 
   .header__theme-menu {
-    margin-block: 178px;
+    margin-block-start: 178px;
+    margin-block-end: 170px;
   }
 
   .header__description-text {
-    margin-block-start: 45px;
+    margin-block-end: 12px;
     justify-self: end;
     max-width: 364px;
   }
 
   .content {
-    padding: 60px 20px;
+    padding: 60px 23px;
     gap: 80px;
   }
 
@@ -354,6 +359,11 @@
     margin-block-start: 0;
     margin-block-end: 10px;
     max-width: 491px;
+  }
+
+  .content {
+    padding: 60px 20px;
+    gap: 80px;
   }
 
   .section-why {
